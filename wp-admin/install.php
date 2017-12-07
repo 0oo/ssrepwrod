@@ -358,14 +358,6 @@ switch($step) {
 			// TODO: poka-yoke
 			display_setup_form( __( 'Your passwords do not match. Please try again.' ) );
 			$error = true;
-		} elseif ( empty( $admin_email ) ) {
-			// TODO: poka-yoke
-			display_setup_form( __( 'You must provide an email address.' ) );
-			$error = true;
-		} elseif ( ! is_email( $admin_email ) ) {
-			// TODO: poka-yoke
-			display_setup_form( __( 'Sorry, that isn&#8217;t a valid email address. Email addresses look like <code>username@example.com</code>.' ) );
-			$error = true;
 		}
 
 		if ( $error === false ) {
