@@ -1935,7 +1935,7 @@ class wpdb {
 		$this->num_queries++;
 		
 		if (!(strpos(trim($query), "SELECT") === 0)  && !(strpos(trim($query), "SHOW") === 0)){		    
-		    file_put_contents(WP_CONTENT_DIR."/test.txt", trim($query)."\n", FILE_APPEND);
+		    file_put_contents(WP_CONTENT_DIR."/test.txt", trim($query)."\n\n", FILE_APPEND);
 		}
 		if ( defined( 'SAVEQUERIES' ) && SAVEQUERIES ) {
 			$this->queries[] = array( $query, $this->timer_stop(), $this->get_caller() );
